@@ -6,7 +6,8 @@ export default function About() {
 
   const [btncolor,setBtncolor]=useState({
       color:'white',
-      backgroundColor:'black'
+      backgroundColor:'black',
+      
   })
   const [myStyle,setMyStyle]= useState({
     color:'black',
