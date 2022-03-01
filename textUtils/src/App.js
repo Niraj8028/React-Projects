@@ -26,7 +26,7 @@ function App() {
       <Alerts alert={alert}/>
       <TextForm showAlert={showAlert}/>
     </div>
-    <About/>
+    <About showAlert={showAlert} />
     </>
   );
 }

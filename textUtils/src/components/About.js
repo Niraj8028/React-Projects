@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-export default function About() {
+export default function About(props) {
  
   const [buttonStyle,setButtonStyle]=useState("Enable Dark Mode")
 
@@ -21,12 +21,14 @@ export default function About() {
         color:'white',
         backgroundColor:'black',
         border:"1px solid white"
+        
       })
       setButtonStyle("Enable Light Mode")
       setBtncolor({
         color:"black",
         backgroundColor:'white'
       })
+      props.showAlert("Dark Mode Enabled!","success")
     }
     else{
       setMyStyle({
@@ -39,6 +41,7 @@ export default function About() {
         color:"white",
         backgroundColor:'black'
       })
+      props.showAlert("Dark Mode Enabled!","success")
     }
   }
 
