@@ -24,7 +24,7 @@ function App() {
       
       <Navbar tittle="Navbar"/>
       <Alerts alert={alert}/>
-      <TextForm/>
+      <TextForm showAlert={showAlert}/>
     </div>
     <About/>
     </>
