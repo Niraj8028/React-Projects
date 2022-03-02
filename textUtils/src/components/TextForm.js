@@ -28,18 +28,18 @@ export default function TextForm(props) {
         <div className="mb-3">
         <h1>Text Converter</h1>
             <label for="exampleFormControlTextarea1" className="form-label"></label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" value={text} onChange={handleOnChange}></textarea>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" value={text} onChange={handleOnChange} ></textarea>
         </div>
-        <button type="button" className="btn btn-dark mx-2" onClick={handleClick}>Convert to toUpperCase</button>
-        <button type="button" className="btn btn-dark mx-2" onClick={handleLowerCase}>Convert to toLowerCase</button>
-        <button type="button" className="btn btn-dark mx-2" onClick={HandleClear}>Clear Text</button>
+        <button disabled={text.length==0} type="button" className="btn btn-dark mx-2 my-1" onClick={handleClick}>Convert to toUpperCase</button>
+        <button disabled={text.length==0} type="button" className="btn btn-dark mx-2 my-1" onClick={handleLowerCase}>Convert to toLowerCase</button>
+        <button disabled={text.length==0} type="button" className="btn btn-dark mx-2 my-1" onClick={HandleClear}>Clear Text</button>
 
     </div>
     <div className="container my-3">
     <h2>Text Summary</h2>
-    Text contains {text.split(" ").length-1} words and {text.length} characters.
-
-    <p className="my-3">{text}</p>
+    Text contains {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters.
+     <div className="container" ></div>   
+    <p className="my-3" style={{'backgroundColor':'rgb(188 197 192)',color:'black',height:'200px',paddingTop:'70px',paddingLeft:'20px',paddingRight:'20px'}}>{text.length>0?text:"Nothing to preview"}</p>
     </div>
    
     </> 
