@@ -20,15 +20,7 @@ export default function Navbar(props) {
         <li className="nav-item">
           <Link className="nav-link"to="/about">About Us</Link>
         </li>
-      <div className="d-flex">
-      <button type="button" class="btn btn-primary" onClick={{}}>Primary</button>
-      <button type="button" class="btn btn-secondary" onClick={{}}>Secondary</button>
-      <button type="button" class="btn btn-success" onClick={{}}>Success</button>
-      <button type="button" class="btn btn-danger" onClick={{}}>Danger</button>
-      
-      
-      
-      </div>
+     
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
