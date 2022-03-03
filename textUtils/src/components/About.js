@@ -14,7 +14,7 @@ export default function About(props) {
     backgroundColor:'white',
     border:"1px solid black"
   });
-
+  document.body.classList.add('bg-primary');
   const HandleTheme=()=>{
     if(myStyle.color=='black'){
       setMyStyle({

@@ -30,17 +30,8 @@ function App() {
       <Alerts alert={alert} />
       <div className="App">
           <Routes>
-
-
-
             <Route path="/about" exact element={<About />} />
-
-
-
             <Route exact path="/" element={<TextForm showAlert={showAlert} />} />
-
-
-
           </Routes>
       </div>
     </div>
