@@ -7,19 +7,27 @@ export default class NewsComponent extends Component {
     super();
     this.state={
       articles:this.articles,
-      loading:'False'
+      loading:'False',
+      page:1
       };
     }
   async componentDidMount(){
-    let url="https:newsapi.org/v2/top-headlines?country=in&apiKey=0d7922a6c0d84b6da8aa019f7498e3bc";
+    let url=`https:newsapi.org/v2/top-headlines?country=in&apiKey=0d7922a6c0d84b6da8aa019f7498e3bc&page=3&pagesize=9`;
     let data=await fetch(url);
     let parsedData=await data.json();
     this.setState({articles:parsedData.articles})
 }
   render() {
+  
+  // handleNextClick(()=>{
+
+  // })
+  // handlePrevClick(()=>{
+
+  // })
     
     return (
-      <div className='container my-3'>
+      <div className='container my-4'>
 
         <h2>NewsMonkey- Top Headlines</h2>
         <div className='row' >
@@ -31,10 +39,11 @@ export default class NewsComponent extends Component {
           </div>
           
         })}
+        </div>
         
-          
-          
-          
+        <div className='container d-flex justify-content-evenly'>
+          <button type="button" className="btn btn-dark " >&#8592; Previous</button>
+          <button type="button" className="btn btn-dark " >Next &#8594;</button>
         </div>
 
       </div>
