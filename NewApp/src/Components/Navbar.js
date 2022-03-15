@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
+
 export class Navbar extends Component {
   static propTypes = {}
 
@@ -19,15 +20,15 @@ export class Navbar extends Component {
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">Business</a>
+              <a className="nav-link" href="/Business">Business</a>
               
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">science</a>
+              <a className="nav-link" href="/science">science</a>
               
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">Sports</a>
+              <a className="nav-link" href="/Sports">Sports</a>
               
             </li>
             <li className="nav-item">
