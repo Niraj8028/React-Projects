@@ -75,7 +75,7 @@ export default class NewsComponent extends Component {
           {!this.state.loading && this.state.articles.map((element) => {
 
             return <div className='col-md-4' key={element.url}>
-              <NewsItem tittle={element.title ? element.title : ""} description={element.description ? element.description : ""} url={element.urlToImage ? element.urlToImage : "https://akm-img-a-in.tosshub.com/indiatoday/images/breaking_news/202203/war-647x363.jpeg?wUMjEFnXKb7SRlKppMFjkwJZsw3sLv0j"} newsUrl={element.url} />
+              <NewsItem tittle={element.title ? element.title : ""} description={element.description ? element.description : ""} url={element.urlToImage ? element.urlToImage : "https://akm-img-a-in.tosshub.com/indiatoday/images/breaking_news/202203/war-647x363.jpeg?wUMjEFnXKb7SRlKppMFjkwJZsw3sLv0j"} newsUrl={element.url} author={element.author} date={element.publishedAt} />
 
             </div>
 
