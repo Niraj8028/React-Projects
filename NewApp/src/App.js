@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Components/Navbar'
+import Counter from './Components/counter';
 import NewsComponent from './Components/NewsComponent'
 import {
   BrowserRouter,
@@ -13,7 +14,7 @@ export default class App extends Component {
 
       <div>
         <Navbar/>
-        <NewsComponent pageSize={6} country='us' category='sports'/>
+        <Counter/>
       </div>
     )
   }
